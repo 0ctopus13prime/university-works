@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>kuceneWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>kdy.config.InitListener</listener-class>
+  </listener>
+  
+  <servlet>
+  	<servlet-name>searchServlet</servlet-name>
+  	<servlet-class>kdy.config.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>searchServlet</servlet-name>
+  	<url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>documentServlet</servlet-name>
+  	<servlet-class>kdy.config.DocumentReadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>documentServlet</servlet-name>
+  	<url-pattern>/document</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,52 @@
+BRANCH       Euclid
+m                           0
+n                           0   
+temp                         0
+r                            0
+Euclid:
+PUSHC         '?
+WRCHR
+RDINT
+POPC          n
+PUSHC         '?
+WRCHR
+RDINT
+POPC          m
+PUSH          m
+PUSH          n
+CMPLT
+BREQ          L1
+PUSH          n
+POPC          temp
+PUSH          m
+POPC          n
+PUSH          temp
+POPC          m
+L1:          PUSH          n
+PUSH          m
+PUSH          n
+PUSH          m
+DIV
+MUL
+SUB
+POPC          r
+L2:          PUSH          0
+PUSHC         r
+CMPGT
+BREQ          L3
+PUSH          m
+POPC          n
+PUSH          r
+POPC          m
+PUSH          n
+PUSH          m
+PUSH          n
+PUSH          m
+DIV
+MUL
+SUB
+POPC          r
+BRANCH       L2
+L3:         PUSH          m
+WRINT
+HALT

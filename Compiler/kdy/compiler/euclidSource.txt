@@ -1,0 +1,20 @@
+PROGRAM Euclid;
+VAR m, n, temp, r: INTEGER;
+BEGIN
+      WRITE('?');           { Prompt user for two integers }
+      READ(n);
+      WRITE('?');
+      READ(m);
+      IF n < m THEN       { Make sure n is the larger of the two }
+       temp := n;
+       n := m;
+       m := temp;
+      END;
+      r := n-m*(n/m);         { r := n MOD m }
+      WHILE r > 0 DO
+          n := m;
+          m :=r;
+          r := n-m*(n/m);     { r := n MOD m }
+      END;
+      WRITE(m);             { m is the GCD-output it }
+END.

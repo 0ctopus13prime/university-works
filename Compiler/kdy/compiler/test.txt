@@ -1,0 +1,21 @@
+   PROGRAM Fact;
+   VAR i,j,m, n,L, fact: INTEGER;{1: doubly declared variable}
+   BEGIN
+         WRITE('?');           { Prompt user for two integers }
+         READ(i);
+         WRITE('?');
+         READ(j);
+         IF i > 0 AND j > 0THEN     
+          IF i > j THEN L := i;
+                   ELSE L := j;	
+          END;	
+	 END;
+	 n := 10;	{2: no semicolon}
+	  fact := 1;
+          WHILE L >0 DO
+            fact := fact * L;
+            L := L - 1;
+          END;  
+          WRITE(fact);           
+   END.
+

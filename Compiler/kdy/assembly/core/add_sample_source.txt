@@ -1,0 +1,9 @@
+BRANCH TEST1
+a 	5
+b  	10
+TEST1 : 
+PUSH a
+PUSH b
+ADD
+WRINT
+HALT
